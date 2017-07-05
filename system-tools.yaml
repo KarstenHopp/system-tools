@@ -1,1 +1,70 @@
-# This is just a placeholder file for a modulemd
+document: modulemd
+version: 1
+data:
+  name: system-tools
+  summary: Provides the tools a general linux user expects on the command line
+  description: >
+            As the modular server is attempting to start from an extrememly
+            small baseline, many of the tools one normally expects are not 
+            provided by default. However, an evaluator of the modular OS often
+            needs these tools. At present, there is nowhere to get them from, 
+            hence the need for this module.
+  license:
+    module:
+      - MIT
+    content: 
+      - ??
+    dependencies:
+        buildrequires:
+            base-runtime: f26
+            common-build-dependencies: f26
+            shared-userspace: f26
+            perl: f26
+        requires:
+            base-runtime: f26
+            shared-userspace: f26
+    references:
+        community: https://fedoraproject.org/wiki/Modularity
+        documentation: https://github.com/modularity-modules/system-tools
+        tracker: https://github.com/modularity-modules/system-tools
+    profiles:
+        default:
+            rpms:
+                - hostname
+                - less
+                - iproute
+                - iputils
+                - procps-ng
+    api:
+        rpms:
+            - hostname
+            - less
+            - iproute
+            - iputils
+    filter:
+        rpms:
+            - perl-SGMLpm
+    components:
+        rpms:
+            hostname:
+                rationale: provides hostname command(s)
+                ref: f26
+            iproute:
+                rationale: provides common network commands like ip
+                ref: f26
+            iputils:
+                rationale: provides common network commands like ping
+                ref: f26
+            procps-ng:
+                rationale: provides common system tools like ps
+                ref: f26
+            less:
+                rationale: provides less
+                ref: f26
+            openssh-clients:
+                rationale: provides openssh client
+                ref: f26
+            vim-minimal:
+                rationale: none
+                ref: f26
+ref: f26
