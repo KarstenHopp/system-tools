@@ -30,19 +30,28 @@ data:
   profiles:
     default:
       rpms:
-        - less
         - iproute
         - iputils
+        - less
         - procps-ng
   components:
     rpms:
       api:
-        - less
         - iproute
         - iputils
+        - less
+        - openssh-clients
 
       filter:
+        - openssh-askpass
+        - openssh-cavs
+        - openssh-clients-ssh1
+        - openssh-keycat
+        - openssh-ldap
+        - openssh-server
+        - pam_ssh_agent_auth
         - perl-SGMLpm
+        - vim-X11
         
       packages:
         hostname:
@@ -60,9 +69,9 @@ data:
         less:
           rationale: provides less
           ref: f26
-        openssh-clients:
+        openssh:
           rationale: provides openssh client
           ref: f26
-        vim-minimal:
+        vim:
           rationale: necessary for editor wars
           ref: f26
