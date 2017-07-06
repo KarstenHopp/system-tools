@@ -39,10 +39,16 @@ data:
       api:
         - iproute
         - iputils
+        - joe
         - less
         - openssh-clients
+        - vim-minimal
+        - emacs-nox
+        - nano
 
       filter:
+        - emacs
+        - emacs-terminal
         - openssh-askpass
         - openssh-cavs
         - openssh-clients-ssh1
@@ -54,6 +60,9 @@ data:
         - vim-X11
         
       packages:
+        emacs:
+          rationale: necessary for editor wars
+          ref: f26
         hostname:
           rationale: provides hostname command(s); may later be removed in favor of hostnamectl
           ref: f26
@@ -63,11 +72,17 @@ data:
         iputils:
           rationale: provides common network commands like ping
           ref: f26
+        joe:
+          rationale: not necessary for editor wars at all but here it is anyway
+          ref: f26
         procps-ng:
           rationale: provides common system tools like ps
           ref: f26
         less:
           rationale: provides less
+          ref: f26
+        nano:
+          rationale: like Canada for editor wars
           ref: f26
         openssh:
           rationale: provides openssh client
