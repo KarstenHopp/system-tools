@@ -2,7 +2,7 @@ document: modulemd
 version: 1
 data:
   name: system-tools
-  summary: Provides the tools a general linux user expects on the command line
+  summary: Provides the tools a general Linux user expects on the command line
   description: >
             As the modular server is attempting to start from an extrememly
             small baseline, many of the tools one normally expects are not 
@@ -65,6 +65,6 @@ data:
                 rationale: provides openssh client
                 ref: f26
             vim-minimal:
-                rationale: none
+                rationale: necessary for editor wars
                 ref: f26
 ref: f26
