@@ -37,6 +37,11 @@ data:
   components:
     rpms:
       api:
+        - calc
+        - dateutils
+        - gcal
+        - htop
+        - iotop
         - iproute
         - iputils
         - joe
@@ -45,10 +50,17 @@ data:
         - vim-minimal
         - emacs-nox
         - nano
+        - nmap
+        - nmap-ncat
+        - rdiff-backup
+        - screen
+        - tmux
+        - wireshark
 
       filter:
         - emacs
         - emacs-terminal
+        - nmap-frontend
         - openssh-askpass
         - openssh-cavs
         - openssh-clients-ssh1
@@ -58,13 +70,30 @@ data:
         - pam_ssh_agent_auth
         - perl-SGMLpm
         - vim-X11
+        - wireshark-gnome
+        - wireshark-devel
         
       packages:
+        calc: 
+          rationale: command-line calculator
+          ref: f26
+        dateutils:
+          rationale: command-line date and time math
+          ref: f26
         emacs:
           rationale: necessary for editor wars
           ref: f26
+        gcal:
+          rationale: better command-line calendar utility
+          ref: f26
         hostname:
           rationale: provides hostname command(s); may later be removed in favor of hostnamectl
+          ref: f26
+        htop:
+          rationale: popular alternative process monitoring tool
+          ref: f26
+        iotop:
+          rationale: basic diagnostic tool
           ref: f26
         iproute:
           rationale: provides common network commands like ip
@@ -84,9 +113,24 @@ data:
         nano:
           rationale: like Canada for editor wars
           ref: f26
+        nmap:
+          rationale: network diagnostic tool + also netcat
+          ref: f26
         openssh:
           rationale: provides openssh client
           ref: f26
+        rdiff-backup:
+          rationale: incremental backup and mirror utility
+          ref: f26
+        screen:
+          rationale: for the screen vs. tmux wars
+          ref: f26
+        tmux:
+          rationale: for the screen vs. tmux wars
+          ref: f26
         vim:
           rationale: necessary for editor wars
+          ref: f26
+        wireshark:
+          rationale: network traffic analyzer
           ref: f26
