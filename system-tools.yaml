@@ -47,7 +47,7 @@ data:
     components:
         rpms:
             hostname:
-                rationale: provides hostname command(s)
+                rationale: provides hostname command(s); may later be removed in favor of hostnamectl
                 ref: f26
             iproute:
                 rationale: provides common network commands like ip
