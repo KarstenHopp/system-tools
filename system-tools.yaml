@@ -14,57 +14,55 @@ data:
       - MIT
     content: 
       - ??
-    dependencies:
-        buildrequires:
-            base-runtime: f26
-            common-build-dependencies: f26
-            shared-userspace: f26
-            perl: f26
-        requires:
-            base-runtime: f26
-            shared-userspace: f26
-    references:
-        community: https://fedoraproject.org/wiki/Modularity
-        documentation: https://github.com/modularity-modules/system-tools
-        tracker: https://github.com/modularity-modules/system-tools
-    profiles:
-        default:
-            rpms:
-                - hostname
-                - less
-                - iproute
-                - iputils
-                - procps-ng
-    api:
-        rpms:
-            - hostname
-            - less
-            - iproute
-            - iputils
-    filter:
-        rpms:
-            - perl-SGMLpm
-    components:
-        rpms:
-            hostname:
-                rationale: provides hostname command(s); may later be removed in favor of hostnamectl
-                ref: f26
-            iproute:
-                rationale: provides common network commands like ip
-                ref: f26
-            iputils:
-                rationale: provides common network commands like ping
-                ref: f26
-            procps-ng:
-                rationale: provides common system tools like ps
-                ref: f26
-            less:
-                rationale: provides less
-                ref: f26
-            openssh-clients:
-                rationale: provides openssh client
-                ref: f26
-            vim-minimal:
-                rationale: necessary for editor wars
-                ref: f26
-ref: f26
+  dependencies:
+    buildrequires:
+      base-runtime: f26
+      common-build-dependencies: f26
+      shared-userspace: f26
+      perl: f26
+    requires:
+      base-runtime: f26
+      shared-userspace: f26
+  references:
+    community: https://fedoraproject.org/wiki/Modularity
+    documentation: https://github.com/modularity-modules/system-tools
+    tracker: https://github.com/modularity-modules/system-tools
+  profiles:
+    default:
+      rpms:
+        - less
+        - iproute
+        - iputils
+        - procps-ng
+  components:
+    rpms:
+      api:
+        - less
+        - iproute
+        - iputils
+
+      filter:
+        - perl-SGMLpm
+        
+      packages:
+        hostname:
+          rationale: provides hostname command(s); may later be removed in favor of hostnamectl
+          ref: f26
+        iproute:
+          rationale: provides common network commands like ip
+          ref: f26
+        iputils:
+          rationale: provides common network commands like ping
+          ref: f26
+        procps-ng:
+          rationale: provides common system tools like ps
+          ref: f26
+        less:
+          rationale: provides less
+          ref: f26
+        openssh-clients:
+          rationale: provides openssh client
+          ref: f26
+        vim-minimal:
+          rationale: necessary for editor wars
+          ref: f26
