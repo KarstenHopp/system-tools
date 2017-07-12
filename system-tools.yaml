@@ -80,7 +80,7 @@ data:
         dateutils:
           rationale: command-line date and time math
           ref: f26
-        emacs:
+        emacs-nox:
           rationale: necessary for editor wars
           ref: f26
         gcal:
